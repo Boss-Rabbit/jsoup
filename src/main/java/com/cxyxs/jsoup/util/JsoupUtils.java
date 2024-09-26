@@ -44,7 +44,8 @@ public class JsoupUtils {
             String titleDiv = el.getElementsByTag("h2").text();
             String[] titles = titleDiv.split(" ");
             //![描述](网址)
-            System.out.println("!["+titles[1]+"]("+href+")");
+            if (titles.length > 1)
+                System.out.println("!["+titles[1]+"]("+href+")");
         }
     }
 }
